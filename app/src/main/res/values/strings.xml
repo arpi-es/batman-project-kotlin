@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Batman Movies</string>
+    <string name="loading_Movies">Loading data …</string>
+    <string name="languages">Languages: %s</string>
+    <string name="watchers">Watchers: %s</string>
+    <string name="openIssues">Open Issues: %s</string>
+    <string name="created_at">Created At: %s</string>
+    <string name="updated_at">Updated At: %s</string>
+    <string name="clone_url">Clone URL: %s</string>
+    <string name="project_language">Project Language</string>
+    <string name="project_watchers">Project Watchers</string>
+    <string name="project_description">Project Description</string>
+    <string name="open_issues">Open Issues</string>
+    <string name="loading_movie">Loading Project …</string>
+    <string name="batman_movies">Batman Movies</string>
+    <string name="movie_list">Movie List</string>
+    <string name="movie_title">Movie Title</string>
+    <string name="movie_name">Movie name</string>
+    <string name="movie_year">Movie year</string>
+</resources>

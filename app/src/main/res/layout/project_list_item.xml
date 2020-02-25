@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="search" type="com.example.project.batman.service.model.Search"/>
+        <variable name="callback" type="com.example.project.batman.view.callback.MovieClickCallback"/>
+        <variable name="adapter" type="com.example.project.batman.view.adapter.MovieAdapter"/>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:onClick="@{() ->  callback.onClick(search)}"
+        android:layout_marginStart="@dimen/item_horizontal_margin"
+        android:layout_marginEnd="@dimen/item_horizontal_margin"
+        android:background="@color/colorPrimaryDark"
+        app:cardUseCompatPadding="true"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgPoster"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                app:image_url="@{search.poster}" />
+
+            <LinearLayout
+                android:layout_marginStart="@dimen/item_horizontal_margin"
+                android:layout_marginEnd="@dimen/item_horizontal_margin"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/movie_title"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/project_text"
+                    android:textColor="@android:color/white"
+                    android:text="@{search.title}"
+                    android:padding="6dp"/>
+
+                <TextView
+                    android:id="@+id/languages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/movie_year"
+                    android:textSize="@dimen/project_text"
+                    android:textColor="@color/colorAccent"
+                    android:text="@{search.year}"
+                    android:padding="6dp"/>
+
+                <TextView
+                    android:id="@+id/project_watchers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/project_watchers"
+                    android:textSize="@dimen/project_text"
+                    android:textColor="@android:color/white"
+                    android:padding="6dp"
+                    android:text="@{search.type}"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>
