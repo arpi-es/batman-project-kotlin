@@ -3,23 +3,26 @@
 package com.example.project.batman.viewmodel
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
 import androidx.databinding.ObservableField
+import androidx.lifecycle.*
 import com.example.project.batman.service.model.Movie
 import com.example.project.batman.service.repository.ProjectRepository
+import com.example.project.batman.service.repository.room.AppDatabase
 
 
 class ProjectViewModel(application: Application, private val sImdbID: String) : AndroidViewModel(application) {
+
+
+    private val repository: ProjectRepository
 
     val observableProject: LiveData<Movie>
 
     var movie = ObservableField<Movie>()
 
     init {
-        observableProject = ProjectRepository.getMovieDetails(sImdbID)
+        val searchDao = AppDatabase.getDatabase(application, viewModelScope).searchDao()
+        repository = ProjectRepository(searchDao)
+        observableProject = repository.getMovieDetails(sImdbID)
     }
 
     fun setProject(movie: Movie ) {

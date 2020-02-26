@@ -1,5 +1,6 @@
 package com.example.project.batman.service.model
 
+import androidx.annotation.NonNull
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -11,10 +12,11 @@ import com.google.gson.annotations.SerializedName
 class Search {
 
     @PrimaryKey(autoGenerate = false)
+    @NonNull
     @ColumnInfo(name = "imdbID")
     @SerializedName("imdbID")
     @Expose
-    var imdbID: String? = null
+    var imdbID: String? = "-1"
 
     @SerializedName("Title")
     @Expose
