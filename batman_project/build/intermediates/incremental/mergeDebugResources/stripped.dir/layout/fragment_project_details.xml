@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+                                                            
+
+    
+                                                    
+                                                                                                        
+           
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:tag="layout/fragment_project_details_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical"
+            android:tag="binding_1"        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/project_header1"
+            android:text="@string/batman_movies"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorAccent"/>
+
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:tag="binding_2"        
+                android:background="@android:color/holo_blue_dark">
+<!---->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imgPoster"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center"  />
+
+                    <LinearLayout
+                        android:layout_marginStart="@dimen/item_horizontal_margin"
+                        android:layout_marginEnd="@dimen/item_horizontal_margin"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:padding="30dp"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/movie_title"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/project_text"
+                            android:textColor="@android:color/white"
+                            android:tag="binding_3"                       
+                            android:padding="6dp"/>
+
+                        <TextView
+                            android:id="@+id/year"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/movie_year"
+                            android:textSize="@dimen/project_text"
+                            android:textColor="@color/colorAccent"
+                            android:tag="binding_4"                      
+                            android:padding="6dp"/>
+
+                        <TextView
+                            android:id="@+id/type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="@string/movie_type"
+                            android:textSize="@dimen/project_text"
+                            android:textColor="@android:color/white"
+                            android:padding="6dp"
+                            android:tag="binding_5"                      />
+                        <!--                android:text="@{String.format(@string/watchers, projectViewModel.project.watchers)}"/>-->
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/loading_project"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/loading_movie"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:tag="binding_6"       />
+
+
+
+    </FrameLayout>
+         

@@ -1,0 +1,77 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.test.mvvm_sample_app"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="19"
+8-->D:\AndroidStudioProjects\app-part1\batman_project\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="25" />
+9-->D:\AndroidStudioProjects\app-part1\batman_project\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->D:\AndroidStudioProjects\app-part1\batman_project\src\main\AndroidManifest.xml:6:5-67
+11-->D:\AndroidStudioProjects\app-part1\batman_project\src\main\AndroidManifest.xml:6:22-64
+12
+13    <application
+13-->D:\AndroidStudioProjects\app-part1\batman_project\src\main\AndroidManifest.xml:8:5-22:19
+14        android:allowBackup="true"
+14-->D:\AndroidStudioProjects\app-part1\batman_project\src\main\AndroidManifest.xml:9:9-35
+15        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+15-->[androidx.core:core:1.3.0-alpha01] C:\Users\sazgar\.gradle\caches\transforms-2\files-2.1\bae7331f976f74259670168747ceeffe\core-1.3.0-alpha01\AndroidManifest.xml:24:18-86
+16        android:debuggable="true"
+17        android:icon="@mipmap/ic_launcher"
+17-->D:\AndroidStudioProjects\app-part1\batman_project\src\main\AndroidManifest.xml:10:9-43
+18        android:label="@string/app_name"
+18-->D:\AndroidStudioProjects\app-part1\batman_project\src\main\AndroidManifest.xml:11:9-41
+19        android:roundIcon="@mipmap/ic_launcher_round"
+19-->D:\AndroidStudioProjects\app-part1\batman_project\src\main\AndroidManifest.xml:12:9-54
+20        android:supportsRtl="true"
+20-->D:\AndroidStudioProjects\app-part1\batman_project\src\main\AndroidManifest.xml:13:9-35
+21        android:testOnly="true"
+22        android:theme="@style/AppTheme.NoActionBar" >
+22-->D:\AndroidStudioProjects\app-part1\batman_project\src\main\AndroidManifest.xml:14:9-52
+23        <activity android:name="com.example.project.batman.view.ui.MainActivity" >
+23-->D:\AndroidStudioProjects\app-part1\batman_project\src\main\AndroidManifest.xml:16:9-21:20
+23-->D:\AndroidStudioProjects\app-part1\batman_project\src\main\AndroidManifest.xml:16:19-81
+24            <intent-filter>
+24-->D:\AndroidStudioProjects\app-part1\batman_project\src\main\AndroidManifest.xml:17:13-20:29
+25                <action android:name="android.intent.action.MAIN" />
+25-->D:\AndroidStudioProjects\app-part1\batman_project\src\main\AndroidManifest.xml:18:17-69
+25-->D:\AndroidStudioProjects\app-part1\batman_project\src\main\AndroidManifest.xml:18:25-66
+26
+27                <category android:name="android.intent.category.LAUNCHER" />
+27-->D:\AndroidStudioProjects\app-part1\batman_project\src\main\AndroidManifest.xml:19:17-77
+27-->D:\AndroidStudioProjects\app-part1\batman_project\src\main\AndroidManifest.xml:19:27-74
+28            </intent-filter>
+29        </activity>
+30
+31        <provider
+31-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\sazgar\.gradle\caches\transforms-2\files-2.1\227f1059463b60e9d47eabe044c6a177\lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
+32            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+32-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\sazgar\.gradle\caches\transforms-2\files-2.1\227f1059463b60e9d47eabe044c6a177\lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
+33            android:authorities="com.example.test.mvvm_sample_app.lifecycle-process"
+33-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\sazgar\.gradle\caches\transforms-2\files-2.1\227f1059463b60e9d47eabe044c6a177\lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
+34            android:exported="false"
+34-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\sazgar\.gradle\caches\transforms-2\files-2.1\227f1059463b60e9d47eabe044c6a177\lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
+35            android:multiprocess="true" />
+35-->[androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\sazgar\.gradle\caches\transforms-2\files-2.1\227f1059463b60e9d47eabe044c6a177\lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
+36        <provider
+36-->[com.squareup.picasso:picasso:2.71828] C:\Users\sazgar\.gradle\caches\transforms-2\files-2.1\bfdfdae9ce2b0030ecc6b69e4d908efe\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+37            android:name="com.squareup.picasso.PicassoProvider"
+37-->[com.squareup.picasso:picasso:2.71828] C:\Users\sazgar\.gradle\caches\transforms-2\files-2.1\bfdfdae9ce2b0030ecc6b69e4d908efe\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+38            android:authorities="com.example.test.mvvm_sample_app.com.squareup.picasso"
+38-->[com.squareup.picasso:picasso:2.71828] C:\Users\sazgar\.gradle\caches\transforms-2\files-2.1\bfdfdae9ce2b0030ecc6b69e4d908efe\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+39            android:exported="false" />
+39-->[com.squareup.picasso:picasso:2.71828] C:\Users\sazgar\.gradle\caches\transforms-2\files-2.1\bfdfdae9ce2b0030ecc6b69e4d908efe\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+40
+41        <service
+41-->[androidx.room:room-runtime:2.2.4] C:\Users\sazgar\.gradle\caches\transforms-2\files-2.1\d29917eee2038299244a807492d10f69\room-runtime-2.2.4\AndroidManifest.xml:25:9-27:40
+42            android:name="androidx.room.MultiInstanceInvalidationService"
+42-->[androidx.room:room-runtime:2.2.4] C:\Users\sazgar\.gradle\caches\transforms-2\files-2.1\d29917eee2038299244a807492d10f69\room-runtime-2.2.4\AndroidManifest.xml:26:13-74
+43            android:exported="false" />
+43-->[androidx.room:room-runtime:2.2.4] C:\Users\sazgar\.gradle\caches\transforms-2\files-2.1\d29917eee2038299244a807492d10f69\room-runtime-2.2.4\AndroidManifest.xml:27:13-37
+44    </application>
+45
+46</manifest>

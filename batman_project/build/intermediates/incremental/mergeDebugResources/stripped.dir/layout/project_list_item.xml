@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+                                                            
+    
+                                                                                        
+                                                                                                      
+                                                                                              
+
+           
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:tag="layout/project_list_item_0"            
+        android:layout_marginStart="@dimen/item_horizontal_margin"
+        android:layout_marginEnd="@dimen/item_horizontal_margin"
+        android:background="@color/colorPrimaryDark"
+        app:cardUseCompatPadding="true"
+          xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgPoster"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                android:tag="binding_1"          />
+
+            <LinearLayout
+                android:layout_marginStart="@dimen/item_horizontal_margin"
+                android:layout_marginEnd="@dimen/item_horizontal_margin"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/movie_title"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/project_text"
+                    android:textColor="@android:color/white"
+                    android:tag="binding_2"       
+                    android:padding="6dp"/>
+
+                <TextView
+                    android:id="@+id/year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/movie_year"
+                    android:textSize="@dimen/project_text"
+                    android:textColor="@color/colorAccent"
+                    android:tag="binding_3"      
+                    android:padding="6dp"/>
+
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/project_watchers"
+                    android:textSize="@dimen/project_text"
+                    android:textColor="@android:color/white"
+                    android:padding="6dp"
+                    android:tag="binding_4"      />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+         

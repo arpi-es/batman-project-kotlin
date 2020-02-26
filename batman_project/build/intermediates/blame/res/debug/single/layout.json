@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\AndroidStudioProjects\\app-part1\\batman_project\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_project_list.xml",
+        "source": "D:\\AndroidStudioProjects\\app-part1\\batman_project\\src\\main\\res\\layout\\fragment_project_list.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\app-part1\\batman_project\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_project_details.xml",
+        "source": "D:\\AndroidStudioProjects\\app-part1\\batman_project\\src\\main\\res\\layout\\fragment_project_details.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\app-part1\\batman_project\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\project_list_item.xml",
+        "source": "D:\\AndroidStudioProjects\\app-part1\\batman_project\\src\\main\\res\\layout\\project_list_item.xml"
+    }
+]
