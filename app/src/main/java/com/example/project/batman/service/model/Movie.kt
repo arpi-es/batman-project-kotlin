@@ -60,6 +60,8 @@ class Movie {
     @SerializedName("Poster")
     @Expose
     var poster: String? = null
+
+    // TODO use typeConvertor,if Rating Needed
 //    @SerializedName("Ratings")
 //    @Expose
 //    var ratings: List<Rating>? = null

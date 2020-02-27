@@ -14,13 +14,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         if (savedInstanceState == null) {
-            val fragment = ProjectListFragment()
-            supportFragmentManager.beginTransaction().add(R.id.fragment_container, fragment, ProjectListFragment.TAG).commit()
+            val fragment = MovieListFragment()
+            supportFragmentManager.beginTransaction().add(R.id.fragment_container, fragment, MovieListFragment.TAG).commit()
         }
     }
 
     fun show(search: Search) {
-        val projectFragment = ProjectFragment.forProject(search.imdbID!!)
+        val projectFragment = MovieDetailFragment.forProject(search.imdbID!!)
         supportFragmentManager.beginTransaction().addToBackStack("project").replace(R.id.fragment_container, projectFragment, null).commit()
     }
 }

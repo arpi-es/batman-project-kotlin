@@ -10,7 +10,7 @@ import com.example.project.batman.service.repository.ProjectRepository
 import com.example.project.batman.service.repository.room.AppDatabase
 
 
-class ProjectViewModel(application: Application, private val sImdbID: String) : AndroidViewModel(application) {
+class MovieDetailViewModel(application: Application, private val sImdbID: String) : AndroidViewModel(application) {
 
 
     private val repository: ProjectRepository
@@ -34,8 +34,8 @@ class ProjectViewModel(application: Application, private val sImdbID: String) : 
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
 
 
-            if (modelClass.isAssignableFrom(ProjectViewModel::class.java)) {
-                return ProjectViewModel(application, sImdbID) as T
+            if (modelClass.isAssignableFrom(MovieDetailViewModel::class.java)) {
+                return MovieDetailViewModel(application, sImdbID) as T
             }
             throw IllegalArgumentException("Unknown ViewModel class")
 

@@ -14,11 +14,11 @@ import com.example.project.batman.R
 import com.example.project.batman.service.model.Search
 import com.example.project.batman.view.adapter.MovieAdapter
 import com.example.project.batman.view.callback.MovieClickCallback
-import com.example.project.batman.viewmodel.ProjectListViewModel
+import com.example.project.batman.viewmodel.MovieListViewModel
 import com.example.project.batman.databinding.FragmentProjectListBinding
 
 
-class ProjectListFragment : Fragment() {
+class MovieListFragment : Fragment() {
     private var movieAdapter: MovieAdapter? = null
     private var binding: FragmentProjectListBinding? = null
 
@@ -46,11 +46,11 @@ class ProjectListFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val viewModel = ViewModelProviders.of(this).get(ProjectListViewModel::class.java)
+        val viewModel = ViewModelProviders.of(this).get(MovieListViewModel::class.java)
         observeViewModel(viewModel)
     }
 
-    private fun observeViewModel(viewModel: ProjectListViewModel) {
+    private fun observeViewModel(viewModel: MovieListViewModel) {
 
         viewModel.movieListObservable.observe(this, Observer { lstSearch ->
             if (lstSearch != null) {

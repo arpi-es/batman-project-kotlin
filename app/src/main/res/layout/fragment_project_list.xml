@@ -5,7 +5,7 @@
 
     <data>
         <variable name="isLoading" type="boolean" />
-        <variable name="projectViewModel" type="com.example.project.batman.viewmodel.ProjectViewModel"/>
+        <variable name="projectViewModel" type="com.example.project.batman.viewmodel.MovieDetailViewModel"/>
     </data>
 
     <LinearLayout
