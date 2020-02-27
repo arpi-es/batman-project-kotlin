@@ -3,6 +3,7 @@ package com.example.project.batman.viewmodel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.Observer
 import androidx.lifecycle.viewModelScope
 import com.example.project.batman.service.model.Search
 import com.example.project.batman.service.repository.ProjectRepository
@@ -20,6 +21,8 @@ class ProjectListViewModel(application: Application) : AndroidViewModel(applicat
         movieListObservable = repository.getMovieList("batman")
 
     }
+
+
 
 
 }

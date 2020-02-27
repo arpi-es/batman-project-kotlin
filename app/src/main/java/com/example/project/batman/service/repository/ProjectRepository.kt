@@ -12,6 +12,7 @@ import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+
 class ProjectRepository(private val searchDao: SearchDao) {
     private val imdbService: IMDBService
 
@@ -22,22 +23,6 @@ class ProjectRepository(private val searchDao: SearchDao) {
                 .build()
 
         imdbService = retrofit.create(IMDBService::class.java)
-    }
-
-    fun getMovieList(sSearch: String): LiveData<List<Search>> {
-        val data = MutableLiveData<List<Search>>()
-
-        imdbService.getMovieList(sSearch).enqueue(object : Callback<SearchResult> {
-            override fun onResponse(call: Call<SearchResult>, response: Response<SearchResult>) {
-                data.value = response.body().search
-            }
-
-            override fun onFailure(call: Call<SearchResult>, t: Throwable) {
-                data.value = null
-            }
-        })
-
-        return data
     }
 
     fun getMovieDetails(sImdbID: String): LiveData<Movie> {
@@ -55,4 +40,44 @@ class ProjectRepository(private val searchDao: SearchDao) {
 
         return data
     }
+
+
+
+    fun getMovieList(sSearch : String): LiveData<List<Search>> {
+        refreshSearch(sSearch)
+        return searchDao.getAll()
+    }
+
+    private fun refreshSearch(sSearch : String) {
+
+        try{
+
+            imdbService.getMovieList(sSearch).enqueue(object : Callback<SearchResult> {
+                override fun onResponse(call: Call<SearchResult>, response: Response<SearchResult>) {
+
+                    if (response.body().response!! == "True") {
+
+                        val lstSearch: List<Search>? = response.body().search
+
+                        response.body().search?.let {
+
+                            if (lstSearch != null) {
+                                Thread { searchDao.insertAll(lstSearch)}.start()
+                            }
+                        }
+                    }
+                }
+
+                override fun onFailure(call: Call<SearchResult>?, t: Throwable?) {
+
+                }
+
+
+            })
+
+        }catch(e: Exception){
+        }
+    }
+
+
 }

@@ -15,6 +15,6 @@ interface SearchDao {
     fun getAll(): LiveData<List<Search>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insertAll(lstItems: List<Search>)
+    fun insertAll(lstItems: List<Search>)
 
 }
