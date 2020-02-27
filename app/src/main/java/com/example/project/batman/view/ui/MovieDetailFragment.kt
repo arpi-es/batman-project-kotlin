@@ -19,10 +19,8 @@ class MovieDetailFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate this data binding layout
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_movie_detail, container, false)
 
-        // Create and set the adapter for the RecyclerView.
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_movie_detail, container, false)
         return binding!!.root
     }
 
@@ -30,7 +28,7 @@ class MovieDetailFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
 
-        val factory = MovieDetailViewModel.Factory(activity!!.application, arguments!!.getString(KEY_PROJECT_ID))
+        val factory = MovieDetailViewModel.Factory(activity!!.application, arguments!!.getString(KEY_MOVIE_ID))
 
 
         val viewModel = ViewModelProviders.of(this, factory).get(MovieDetailViewModel::class.java)
@@ -52,14 +50,13 @@ class MovieDetailFragment : Fragment() {
     }
 
     companion object {
-        private const val KEY_PROJECT_ID = "project_id"
+        private const val KEY_MOVIE_ID = "movie_id"
 
-        /** Creates project fragment for specific project ID  */
-        fun forProject(projectID: String): MovieDetailFragment {
+        fun forProject(sID: String): MovieDetailFragment {
             val fragment = MovieDetailFragment()
             val args = Bundle()
 
-            args.putString(KEY_PROJECT_ID, projectID)
+            args.putString(KEY_MOVIE_ID, sID)
             fragment.arguments = args
 
             return fragment
