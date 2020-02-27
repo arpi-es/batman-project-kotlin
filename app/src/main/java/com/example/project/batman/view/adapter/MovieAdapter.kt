@@ -6,7 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.project.batman.R
-import com.example.project.batman.databinding.ProjectListItemBinding
+import com.example.project.batman.databinding.MovieListItemBinding
 import com.example.project.batman.service.model.Search
 import com.example.project.batman.view.callback.MovieClickCallback
 
@@ -44,7 +44,7 @@ class MovieAdapter(private val projectClickCallback: MovieClickCallback?) : Recy
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): movieViewHolder {
-       val binding = DataBindingUtil.inflate<ProjectListItemBinding>(LayoutInflater.from(parent.context), R.layout.movie_list_item, parent, false)
+       val binding = DataBindingUtil.inflate<MovieListItemBinding>(LayoutInflater.from(parent.context), R.layout.movie_list_item, parent, false)
         binding.callback = projectClickCallback
 
         return movieViewHolder(binding)
@@ -64,7 +64,7 @@ class MovieAdapter(private val projectClickCallback: MovieClickCallback?) : Recy
     }
 
 
-     class movieViewHolder(val binding: ProjectListItemBinding) : RecyclerView.ViewHolder(binding.root){
+     class movieViewHolder(val binding: MovieListItemBinding) : RecyclerView.ViewHolder(binding.root){
 
     }
 }

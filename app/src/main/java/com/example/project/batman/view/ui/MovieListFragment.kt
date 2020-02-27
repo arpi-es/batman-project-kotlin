@@ -11,16 +11,16 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 
 import com.example.project.batman.R
+import com.example.project.batman.databinding.FragmentMovieListBinding
 import com.example.project.batman.service.model.Search
 import com.example.project.batman.view.adapter.MovieAdapter
 import com.example.project.batman.view.callback.MovieClickCallback
 import com.example.project.batman.viewmodel.MovieListViewModel
-import com.example.project.batman.databinding.FragmentProjectListBinding
 
 
 class MovieListFragment : Fragment() {
     private var movieAdapter: MovieAdapter? = null
-    private var binding: FragmentProjectListBinding? = null
+    private var binding: FragmentMovieListBinding? = null
 
     companion object {
         val TAG = "MovieListFragment"

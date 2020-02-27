@@ -6,16 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.project.batman.R
-import com.example.project.batman.databinding.FragmentProjectDetailsBinding
 
 import com.example.project.batman.viewmodel.MovieDetailViewModel
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.example.project.batman.databinding.FragmentMovieDetailBinding
 
 class MovieDetailFragment : Fragment() {
-    private var binding: FragmentProjectDetailsBinding? = null
+    private var binding: FragmentMovieDetailBinding? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {

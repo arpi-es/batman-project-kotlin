@@ -77,7 +77,8 @@ dependencies {
 
 
 
-   
+   //MultipleTextView
+    implementation 'com.github.JayChan95318:MultipleTextView:1.0'
 
 }
 repositories {

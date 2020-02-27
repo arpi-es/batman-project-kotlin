@@ -22,6 +22,7 @@ allprojects {
         jcenter()
         maven { url 'https://maven.google.com' }
         google()
+        maven { url 'https://jitpack.io'}// Add jitpack warehouse address
     }
 }
 
