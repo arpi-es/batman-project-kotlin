@@ -20,7 +20,7 @@ class MovieDetailFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate this data binding layout
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_project_details, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_movie_detail, container, false)
 
         // Create and set the adapter for the RecyclerView.
         return binding!!.root

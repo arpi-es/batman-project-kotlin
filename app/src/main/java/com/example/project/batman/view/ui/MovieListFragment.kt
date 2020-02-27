@@ -35,7 +35,7 @@ class MovieListFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_project_list, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_movie_list, container, false)
 
         movieAdapter = MovieAdapter(movieClickCallback)
         binding!!.projectList.adapter = movieAdapter

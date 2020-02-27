@@ -81,7 +81,7 @@ public abstract class ProjectListItemBinding extends ViewDataBinding {
    * type DataBindingComponent to avoid causing too many compilation errors if
    * compilation fails for another reason.
    * https://issuetracker.google.com/issues/116541301
-   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.project_list_item, root, attachToRoot, component)
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.movie_list_item, root, attachToRoot, component)
    */
   @NonNull
   @Deprecated
@@ -100,7 +100,7 @@ public abstract class ProjectListItemBinding extends ViewDataBinding {
    * type DataBindingComponent to avoid causing too many compilation errors if
    * compilation fails for another reason.
    * https://issuetracker.google.com/issues/116541301
-   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.project_list_item, null, false, component)
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.movie_list_item, null, false, component)
    */
   @NonNull
   @Deprecated

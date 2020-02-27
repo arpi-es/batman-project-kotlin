@@ -73,7 +73,7 @@ public abstract class FragmentProjectDetailsBinding extends ViewDataBinding {
    * type DataBindingComponent to avoid causing too many compilation errors if
    * compilation fails for another reason.
    * https://issuetracker.google.com/issues/116541301
-   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.fragment_project_details, root, attachToRoot, component)
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.fragment_movie_detail, root, attachToRoot, component)
    */
   @NonNull
   @Deprecated
@@ -92,7 +92,7 @@ public abstract class FragmentProjectDetailsBinding extends ViewDataBinding {
    * type DataBindingComponent to avoid causing too many compilation errors if
    * compilation fails for another reason.
    * https://issuetracker.google.com/issues/116541301
-   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.fragment_project_details, null, false, component)
+   * @Deprecated Use DataBindingUtil.inflate(inflater, R.layout.fragment_movie_detail, null, false, component)
    */
   @NonNull
   @Deprecated

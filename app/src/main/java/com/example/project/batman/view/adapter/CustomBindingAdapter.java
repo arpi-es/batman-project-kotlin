@@ -21,9 +21,6 @@ public class CustomBindingAdapter {
     @BindingAdapter({"bind:image_url"})
     public static void loadImage(ImageView imageView, String url)
     {
-//        Picasso.with(imageView.getContext()).load(url).resize(200,200).into(imageView);
-//
-
         Glide.with(imageView.getContext())
                 .load(url).apply(new RequestOptions().fitCenter().placeholder(R.drawable.placeholder))
                 .into(imageView);

@@ -2,18 +2,13 @@ package com.example.project.batman.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
-import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
 import com.example.project.batman.R
 import com.example.project.batman.databinding.ProjectListItemBinding
 import com.example.project.batman.service.model.Search
 import com.example.project.batman.view.callback.MovieClickCallback
-import kotlinx.android.synthetic.main.project_list_item.view.*
 
 class MovieAdapter(private val projectClickCallback: MovieClickCallback?) : RecyclerView.Adapter<MovieAdapter.movieViewHolder>() {
 
@@ -49,7 +44,7 @@ class MovieAdapter(private val projectClickCallback: MovieClickCallback?) : Recy
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): movieViewHolder {
-       val binding = DataBindingUtil.inflate<ProjectListItemBinding>(LayoutInflater.from(parent.context), R.layout.project_list_item, parent, false)
+       val binding = DataBindingUtil.inflate<ProjectListItemBinding>(LayoutInflater.from(parent.context), R.layout.movie_list_item, parent, false)
         binding.callback = projectClickCallback
 
         return movieViewHolder(binding)

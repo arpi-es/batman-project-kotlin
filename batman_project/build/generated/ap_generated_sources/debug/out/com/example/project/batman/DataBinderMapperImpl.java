@@ -47,19 +47,19 @@ public class DataBinderMapperImpl extends DataBinderMapper {
           if ("layout/fragment_project_details_0".equals(tag)) {
             return new FragmentProjectDetailsBindingImpl(component, view);
           }
-          throw new IllegalArgumentException("The tag for fragment_project_details is invalid. Received: " + tag);
+          throw new IllegalArgumentException("The tag for fragment_movie_detail is invalid. Received: " + tag);
         }
         case  LAYOUT_FRAGMENTPROJECTLIST: {
           if ("layout/fragment_project_list_0".equals(tag)) {
             return new FragmentProjectListBindingImpl(component, view);
           }
-          throw new IllegalArgumentException("The tag for fragment_project_list is invalid. Received: " + tag);
+          throw new IllegalArgumentException("The tag for fragment_movie_list is invalid. Received: " + tag);
         }
         case  LAYOUT_PROJECTLISTITEM: {
           if ("layout/project_list_item_0".equals(tag)) {
             return new ProjectListItemBindingImpl(component, view);
           }
-          throw new IllegalArgumentException("The tag for project_list_item is invalid. Received: " + tag);
+          throw new IllegalArgumentException("The tag for movie_list_item is invalid. Received: " + tag);
         }
       }
     }
