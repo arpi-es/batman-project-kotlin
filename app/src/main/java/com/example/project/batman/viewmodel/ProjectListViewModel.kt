@@ -17,7 +17,8 @@ class ProjectListViewModel(application: Application) : AndroidViewModel(applicat
     init {
 
         val searchDao = AppDatabase.getDatabase(application, viewModelScope).searchDao()
-        repository = ProjectRepository(searchDao)
+        val movieDao = AppDatabase.getDatabase(application, viewModelScope).movieDao()
+        repository = ProjectRepository(searchDao, movieDao )
         movieListObservable = repository.getMovieList("batman")
 
     }

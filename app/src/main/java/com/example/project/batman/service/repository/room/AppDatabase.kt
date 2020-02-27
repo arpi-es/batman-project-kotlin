@@ -5,18 +5,19 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
+import com.example.project.batman.service.model.Movie
 import com.example.project.batman.service.model.Search
 import kotlinx.coroutines.CoroutineScope
 
 
-@Database(entities = [Search::class],
+@Database(entities = [Search::class, Movie::class],
         version = 1, exportSchema = false)
 
 
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun searchDao(): SearchDao
-
+    abstract fun movieDao(): MovieDao
     companion object {
         @Volatile
         private var INSTANCE: AppDatabase? = null

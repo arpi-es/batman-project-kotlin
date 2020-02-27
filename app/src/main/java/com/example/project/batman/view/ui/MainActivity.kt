@@ -13,8 +13,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
         if (savedInstanceState == null) {
             val fragment = ProjectListFragment()
             supportFragmentManager.beginTransaction().add(R.id.fragment_container, fragment, ProjectListFragment.TAG).commit()
@@ -22,7 +20,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun show(search: Search) {
-
         val projectFragment = ProjectFragment.forProject(search.imdbID!!)
         supportFragmentManager.beginTransaction().addToBackStack("project").replace(R.id.fragment_container, projectFragment, null).commit()
     }

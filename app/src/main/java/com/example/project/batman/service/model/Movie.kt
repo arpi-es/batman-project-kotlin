@@ -60,9 +60,9 @@ class Movie {
     @SerializedName("Poster")
     @Expose
     var poster: String? = null
-    @SerializedName("Ratings")
-    @Expose
-    var ratings: List<Rating>? = null
+//    @SerializedName("Ratings")
+//    @Expose
+//    var ratings: List<Rating>? = null
     @SerializedName("Metascore")
     @Expose
     var metascore: String? = null

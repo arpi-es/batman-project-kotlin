@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import com.example.project.batman.service.model.Movie
 import com.example.project.batman.service.model.Search
 import com.example.project.batman.service.model.SearchResult
+import com.example.project.batman.service.repository.room.MovieDao
 import com.example.project.batman.service.repository.room.SearchDao
 import retrofit2.Call
 import retrofit2.Callback
@@ -13,7 +14,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 
-class ProjectRepository(private val searchDao: SearchDao) {
+class ProjectRepository(private val searchDao: SearchDao, private val movieDao: MovieDao) {
     private val imdbService: IMDBService
 
     init {
@@ -24,24 +25,6 @@ class ProjectRepository(private val searchDao: SearchDao) {
 
         imdbService = retrofit.create(IMDBService::class.java)
     }
-
-    fun getMovieDetails(sImdbID: String): LiveData<Movie> {
-        val data = MutableLiveData<Movie>()
-
-        imdbService.getMovieDetails(sImdbID).enqueue(object : Callback<Movie> {
-            override fun onResponse(call: Call<Movie>, response: Response<Movie>) {
-                data.value = response.body()
-            }
-
-            override fun onFailure(call: Call<Movie>, t: Throwable) {
-                data.value = null
-            }
-        })
-
-        return data
-    }
-
-
 
     fun getMovieList(sSearch : String): LiveData<List<Search>> {
         refreshSearch(sSearch)
@@ -79,5 +62,54 @@ class ProjectRepository(private val searchDao: SearchDao) {
         }
     }
 
+
+
+    fun getMovieDetails(sImdbID: String): LiveData<Movie> {
+//        val data = MutableLiveData<Movie>()
+//
+//        imdbService.getMovieDetails(sImdbID).enqueue(object : Callback<Movie> {
+//            override fun onResponse(call: Call<Movie>, response: Response<Movie>) {
+//                data.value = response.body()
+//            }
+//
+//            override fun onFailure(call: Call<Movie>, t: Throwable) {
+//                data.value = null
+//            }
+//        })
+//
+//        return data
+
+        refreshMovieDetail(sImdbID)
+        return movieDao.getMovie(sImdbID)
+
+    }
+
+
+    private fun refreshMovieDetail(sImdbID: String) {
+
+        try{
+
+            imdbService.getMovieDetails(sImdbID).enqueue(object : Callback<Movie> {
+                override fun onResponse(call: Call<Movie>, response: Response<Movie>) {
+
+                    if (response.body().response!! == "True") {
+
+                        val movie: Movie = response.body()
+                        movie.let {
+                            Thread { movieDao.insertMovie(movie)}.start()
+                        }
+                    }
+                }
+
+                override fun onFailure(call: Call<Movie>, t: Throwable) {
+
+                }
+
+
+            })
+
+        }catch(e: Exception){
+        }
+    }
 
 }
